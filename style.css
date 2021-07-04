@@ -10,11 +10,14 @@ h2{
 }
 .flex-container{
     display: flex;
-    height: 100vh;
+}
+section{
+    margin-bottom: 10%;
 }
 .half-width{
     width: 50%;
-    padding-left: 10%;
+    padding-left: 2%;
+    margin-left: 5%;
 }
 .half-width img{
     padding-top: 10%;
@@ -40,6 +43,12 @@ h2{
 .exp-area{
     background-image: url(Image/exp-bg.png);
     background-repeat: no-repeat;
-    background-color: darkgrey;
     background-position: left;
+}
+.box-shadow{
+    height: auto;
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 1px 1px 10px rgb(131, 131, 131);
 }
