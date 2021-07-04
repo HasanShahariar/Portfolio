@@ -51,4 +51,18 @@ section{
     margin-left: 5%;
     margin-right: 5%;
     box-shadow: 1px 1px 10px rgb(131, 131, 131);
+    
+}
+.border-gradiant-1{
+    border-left: 7px solid;
+    border-image: linear-gradient(rgb(255, 174, 0),rgb(3, 88, 77));
+    border-image-slice: 1;
+}
+.border-gradiant-2{
+    border-left: 7px solid;
+    border-image: linear-gradient(blue,cyan);
+    border-image-slice: 1;
+}
+footer p{
+    text-align: center;
 }
