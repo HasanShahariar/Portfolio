@@ -2,10 +2,13 @@ body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
-h1,h2{
-    font-size: 50px;
+h1{
+    font-size: 40px;
 }
-section{
+h2{
+    font-size: 1.12rem;
+}
+.flex-container{
     display: flex;
     height: 100vh;
 }
@@ -26,6 +29,17 @@ section{
     font-weight: 700;
 }
 .top-banner{
-    background-size: 100%;
+    background-image: url(Image/top-banner.png);
     background-repeat: no-repeat;
+}
+.dream-bg{
+    background-image: url(Image/dream-bg.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.exp-area{
+    background-image: url(Image/exp-bg.png);
+    background-repeat: no-repeat;
+    background-color: darkgrey;
+    background-position: left;
 }
