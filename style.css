@@ -1,66 +1,65 @@
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins",sans-serif;
     margin: 0;
-}
-h1{
-    font-size: 40px;
-}
-h2{
-    font-size: 1.12rem;
 }
 .flex-container{
     display: flex;
 }
-section{
-    margin-bottom: 10%;
+h1{
+    font-size: 40px;
+}
+h3{
+    font-size: 30px; 
 }
 .half-width{
     width: 50%;
-    padding-left: 2%;
-    margin-left: 5%;
+    padding: 0 3%;
+    margin: 0 5%;
 }
 .half-width img{
-    padding-top: 10%;
     width: 80%;
+    margin-top: 10%;
 }
-.link-button{
+.hire-btn{
+    display: block;
+    width: 65px;
+    margin-top: 5%;
     text-decoration: none;
-    background-image: linear-gradient(orange,tomato);
-    padding: 10px 40px;
+    background-image: linear-gradient(45deg,orange,tomato);
     color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 40px;
     border-radius: 5px;
-    font-weight: 700;
 }
-.top-banner{
-    /* background-image: url(Image/top-banner.png); */
+.mb-2{
+    padding-bottom: 150px;
+}
+.portfolio{
+    background-image: url(Image/top-banner.png);
     background-repeat: no-repeat;
-} 
-.dream-bg{
+}
+.dream-big{
     background-image: url(Image/dream-bg.png);
-    background-position: right;
     background-repeat: no-repeat;
+    background-position: right;
 }
 .exp-area{
     background-image: url(Image/exp-bg.png);
     background-repeat: no-repeat;
     background-position: left;
 }
-.box-shadow{
-    height: auto;
-    width: 40%;
-    margin-left: 5%;
-    margin-right: 5%;
-    box-shadow: 1px 1px 10px rgb(131, 131, 131);
-    
+.box-shade{
+    box-shadow: 1px 1px 10px ;
 }
-.border-gradiant-1{
-    border-left: 7px solid;
-    border-image: linear-gradient(rgb(255, 174, 0),rgb(3, 88, 77));
+.border-left-1{
+    border-left: 5px solid;
+    border-image: linear-gradient(rgb(23, 23, 180),cyan);
     border-image-slice: 1;
 }
-.border-gradiant-2{
-    border-left: 7px solid;
-    border-image: linear-gradient(blue,cyan);
+.border-left-2{
+    border-left: 5px solid;
+    border-image: linear-gradient(rgb(180, 86, 23),rgb(251, 255, 0));
     border-image-slice: 1;
 }
 footer p{
