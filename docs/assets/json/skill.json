@@ -1,0 +1,338 @@
+[
+    {
+      "id": 1,
+      "typeId": 1,
+      "type": "Frontend Development",
+      "title": "Angular",
+      "imageUrl": "../../../../../assets/images/skills/angular.png"
+    },
+    {
+      "id": 2,
+      "typeId": 1,
+      "type": "Frontend Development",
+      "title": "CSS3",
+      "imageUrl": "../../../../../assets/images/skills/CSS3_logo.svg"
+    },
+    {
+      "id": 3,
+      "typeId": 1,
+      "type": "Frontend Development",
+      "title": "Bootstrap",
+      "imageUrl": "../../../../../assets/images/skills/Bootstrap_logo.svg"
+    },
+    {
+      "id": 4,
+      "typeId": 1,
+      "type": "Frontend Development",
+      "title": "Tailwind CSS",
+      "imageUrl": "../../../../../assets/images/skills/Tailwind_CSS_Logo.svg"
+    },
+    {
+      "id": 5,
+      "typeId": 1,
+      "type": "Frontend Development",
+      "title": "Angular Material",
+      "imageUrl": "../../../../../assets/images/skills/angular-material.png"
+    },
+    {
+      "id": 6,
+      "typeId": 1,
+      "type": "Frontend Development",
+      "title": "JavaScript",
+      "imageUrl": "../../../../../assets/images/skills/JavaScript-logo.png"
+    },
+    {
+      "id": 7,
+      "typeId": 1,
+      "type": "Frontend Development",
+      "title": "TypeScript",
+      "imageUrl": "../../../../../assets/images/skills/Typescript_logo_2020.svg"
+    },
+    {
+      "id": 8,
+      "typeId": 2,
+      "type": "Backend Development",
+      "title": "C#",
+      "imageUrl": "../../../../../assets/images/skills/Csharp_Logo.png"
+    },
+    {
+      "id": 9,
+      "typeId": 2,
+      "type": "Backend Development",
+      "title": "C++",
+      "imageUrl": "../../../../../assets/images/skills/ISO_C++_Logo.svg"
+    },
+    {
+      "id": 10,
+      "typeId": 2,
+      "type": "Backend Development",
+      "title": ".NET Core",
+      "imageUrl": "../../../../../assets/images/skills/NET_Core_Logo.svg"
+    },
+    {
+      "id": 11,
+      "typeId": 2,
+      "type": "Backend Development",
+      "title": ".NET MVC",
+      "imageUrl": "../../../../../assets/images/skills/dotnetmvc.png"
+    },
+    {
+      "id": 12,
+      "typeId": 2,
+      "type": "Backend Development",
+      "title": "Web API",
+      "imageUrl": "../../../../../assets/images/skills/webapi.png"
+    },
+    {
+      "id": 13,
+      "typeId": 2,
+      "type": "Backend Development",
+      "title": "Windows Form",
+      "imageUrl": "../../../../../assets/images/skills/windowsform.png"
+    },
+    {
+      "id": 14,
+      "typeId": 2,
+      "type": "Backend Development",
+      "title": "RDLC",
+      "imageUrl": "../../../../../assets/images/skills/rdlc.png"
+    },
+    {
+      "id": 15,
+      "typeId": 2,
+      "type": "Backend Development",
+      "title": "Docker",
+      "imageUrl": "../../../../../assets/images/skills/Docker_(container_engine)_logo.svg"
+    },
+    {
+      "id": 16,
+      "typeId": 2,
+      "type": "Backend Development",
+      "title": "AWS EC2",
+      "imageUrl": "../../../../../assets/images/skills/Amazon_Web_Services_Logo.svg"
+    },
+    {
+      "id": 17,
+      "typeId": 2,
+      "type": "Backend Development",
+      "title": "SignalR",
+      "imageUrl": "../../../../../assets/images/skills/signalr.png"
+    },
+    {
+      "id": 18,
+      "typeId": 2,
+      "type": "Backend Development",
+      "title": "RabbitMQ",
+      "imageUrl": "../../../../../assets/images/skills/rabbitmq.png"
+    },
+    {
+      "id": 19,
+      "typeId": 2,
+      "type": "Backend Development",
+      "title": "IIS",
+      "imageUrl": "../../../../../assets/images/skills/iis.png"
+    },
+    {
+      "id": 20,
+      "typeId": 3,
+      "type": "Databases",
+      "title": "Entity Framework (EF) Core",
+      "imageUrl": "../../../../../assets/images/skills/entityframework.png"
+    },
+    {
+      "id": 21,
+      "typeId": 3,
+      "type": "Databases",
+      "title": "ADO .Net",
+      "imageUrl": "../../../../../assets/images/skills/adonet.png"
+    },
+    {
+      "id": 22,
+      "typeId": 3,
+      "type": "Databases",
+      "title": "SQL",
+      "imageUrl": "../../../../../assets/images/skills/Sql_data_base_with_logo.png"
+    },
+    {
+      "id": 23,
+      "typeId": 3,
+      "type": "Databases",
+      "title": "PostgreSQL",
+      "imageUrl": "../../../../../assets/images/skills/Postgresql_elephant.svg"
+    },
+    {
+      "id": 24,
+      "typeId": 3,
+      "type": "Databases",
+      "title": "SSMS",
+      "imageUrl": "../../../../../assets/images/skills/ssms.png"
+    },
+    {
+      "id": 25,
+      "typeId": 3,
+      "type": "Databases",
+      "title": "PgAdmin",
+      "imageUrl": "../../../../../assets/images/skills/pgadmin.png"
+    },
+    {
+      "id": 26,
+      "typeId": 4,
+      "type": "Programming Principles and Patterns",
+      "title": "OOP",
+      "imageUrl": "../../../../../assets/images/skills/oop.png"
+    },
+    {
+      "id": 27,
+      "typeId": 4,
+      "type": "Programming Principles and Patterns",
+      "title": "SOLID Principle",
+      "imageUrl": "../../../../../assets/images/skills/solid.png"
+    },
+    {
+      "id": 28,
+      "typeId": 4,
+      "type": "Programming Principles and Patterns",
+      "title": "Repository Pattern",
+      "imageUrl": "../../../../../assets/images/skills/repository.png"
+    },
+    {
+      "id": 29,
+      "typeId": 4,
+      "type": "Programming Principles and Patterns",
+      "title": "Unit Of Work Pattern",
+      "imageUrl": "../../../../../assets/images/skills/unitofwork.png"
+    },
+    {
+      "id": 30,
+      "typeId": 5,
+      "type": "Architecture",
+      "title": "Clean Architecture",
+      "imageUrl": "../../../../../assets/images/skills/clean-architecture.png"
+    },
+    {
+      "id": 31,
+      "typeId": 5,
+      "type": "Architecture",
+      "title": "Microservice",
+      "imageUrl": "../../../../../assets/images/skills/microservice.png"
+    },
+    {
+      "id": 32,
+      "typeId": 5,
+      "type": "Architecture",
+      "title": "3-Layer Architecture",
+      "imageUrl": "../../../../../assets/images/skills/3layer.png"
+    },
+    {
+      "id": 33,
+      "typeId": 5,
+      "type": "Architecture",
+      "title": "Monolith",
+      "imageUrl": "../../../../../assets/images/skills/monolith.png"
+    },
+    {
+      "id": 34,
+      "typeId": 6,
+      "type": "Security",
+      "title": "Identity Framework",
+      "imageUrl": "../../../../../assets/images/skills/identity.png"
+    },
+    {
+      "id": 35,
+      "typeId": 6,
+      "type": "Security",
+      "title": "Authentication",
+      "imageUrl": "../../../../../assets/images/skills/authentication.png"
+    },
+    {
+      "id": 36,
+      "typeId": 6,
+      "type": "Security",
+      "title": "Authorization",
+      "imageUrl": "../../../../../assets/images/skills/authorization.png"
+    },
+    {
+      "id": 37,
+      "typeId": 7,
+      "type": "Logging and Utilities",
+      "title": "NLog",
+      "imageUrl": "../../../../../assets/images/skills/nlog.png"
+    },
+    {
+      "id": 38,
+      "typeId": 7,
+      "type": "Logging and Utilities",
+      "title": "Serilog",
+      "imageUrl": "../../../../../assets/images/skills/serilog.png"
+    },
+    {
+      "id": 39,
+      "typeId": 7,
+      "type": "Logging and Utilities",
+      "title": "Automapper",
+      "imageUrl": "../../../../../assets/images/skills/automapper.png"
+    },
+    {
+      "id": 40,
+      "typeId": 7,
+      "type": "Logging and Utilities",
+      "title": "NPOI",
+      "imageUrl": "../../../../../assets/images/skills/automapper.png"
+    },
+    {
+        "id": 41,
+        "typeId": 8,
+        "type": "Tools and Platforms",
+        "title": "SDLC",
+        "imageUrl": "../../../../../assets/images/skills/sdlc.png"
+      },
+      {
+        "id": 42,
+        "typeId": 8,
+        "type": "Tools and Platforms",
+        "title": "Swagger",
+        "imageUrl": "../../../../../assets/images/skills/Swagger-logo.png"
+      },
+      {
+        "id": 43,
+        "typeId": 8,
+        "type": "Tools and Platforms",
+        "title": "git",
+        "imageUrl": "../../../../../assets/images/skills/Git-logo.svg"
+      },
+      {
+        "id": 44,
+        "typeId": 8,
+        "type": "Tools and Platforms",
+        "title": "Gitlab",
+        "imageUrl": "../../../../../assets/images/skills/gitlab-logo.png"
+      },
+      {
+        "id": 45,
+        "typeId": 8,
+        "type": "Tools and Platforms",
+        "title": "Slack",
+        "imageUrl": "../../../../../assets/images/skills/Slack_Icon.png"
+      },
+      {
+        "id": 46,
+        "typeId": 8,
+        "type": "Tools and Platforms",
+        "title": "ASANA",
+        "imageUrl": "../../../../../assets/images/skills/asana-logo.png"
+      },
+      {
+        "id": 47,
+        "typeId": 8,
+        "type": "Tools and Platforms",
+        "title": "Chrome Dev Tools",
+        "imageUrl": "../../../../../assets/images/skills/chrome-dev-tools.png"
+      },
+      {
+        "id": 48,
+        "typeId": 8,
+        "type": "Tools and Platforms",
+        "title": "Diagrams(draw.io)",
+        "imageUrl": "../../../../../assets/images/skills/diagrams.png"
+      }
+    ]
