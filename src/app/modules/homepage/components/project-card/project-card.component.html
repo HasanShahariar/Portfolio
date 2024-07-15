@@ -1,0 +1,16 @@
+<!-- <div class="card-container" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()"> -->
+  <div class="card-container">
+    <div
+      class="card"
+      [ngStyle]="{ 'background-image': 'url(' + card.imageUrl + ')' }"
+    >
+      <div class="card-overlay">
+        <h3>{{ card.title }}</h3>
+        <div class="project-btn-container">
+          <button class="primary-btn" (click)="openUrl(portfolioViewUrl)">View</button>
+        <button class="primary-btn" (click)="openUrl(portfolioGitUrl)"><i class="fab fa-github"></i>  Github</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

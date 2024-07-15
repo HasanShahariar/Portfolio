@@ -1,47 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+HR:wght@100..400&family=Quicksand:wght@300..700&display=swap');
+@import "bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+HR:wght@100..400&family=Quicksand:wght@300..700&display=swap");
 // $app-primary-color: #7780ff;
 // $app-secondary-color: #ffd20c;
 // $app-success-color: #03a012;
 
 :root {
-    --primary-theme-color: #7780ff;
-    --primary-text-color: #000000;
-    --secondary-text-color: #f1a803;
-  }
-  
-  [data-theme='dark'] {
-    --primary-theme-color: #ffd622;
-    --primary-text-color: #ffffff;
-    --secondary-text-color: #00cc5c;
-  }
-  
-  body {
-    // background-color: var(--background-color);
-    // color: var(--text-color);
-  }
-  
-  a.nav-link.active {
-    border-bottom: 2px solid var(--primary-color);
-  }
+  --primary-theme-color: #7780ff;
+  --primary-text-color: #000000;
+  --secondary-text-color: #f1a803;
+}
 
+[data-theme="dark"] {
+  --primary-theme-color: #ffd622;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #00cc5c;
+}
+
+body {
+  // background-color: var(--background-color);
+  // color: var(--text-color);
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+a.nav-link.active {
+  border-bottom: 2px solid var(--primary-color);
+}
 
 /* styles.css */
 
 *::-webkit-scrollbar {
-  width: 10px; 
+  width: 10px;
 }
 
 *::-webkit-scrollbar-track {
-background-color: rgb(196, 196, 196);
-border-radius: 25px;
+  background-color: rgb(196, 196, 196);
+  border-radius: 25px;
 }
 
 *::-webkit-scrollbar-thumb {
-background: var(--primary-theme-color);
-border-radius: 25px;
+  background: var(--primary-theme-color);
+  border-radius: 25px;
 }
 
+.primary-btn {
+  background-color: var(--primary-theme-color);
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  font-size: 14px;
+}
+.primary-btn:hover{
+  filter: saturate(400%);
+}

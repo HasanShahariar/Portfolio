@@ -1,4 +1,4 @@
-import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -7,12 +7,26 @@ import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/
 })
 export class NavComponent implements OnInit {
   menu: number = 1;
+  showInfo: boolean = false;
   @Output() navigateToSection = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(
+    private el: ElementRef
+  ) { }
 
   ngOnInit() {
     this.checkScroll();
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const clickedInside = this.el.nativeElement.contains(event.target);
+    if (!clickedInside) {
+      this.showInfo = false;
+    }
+  }
+  toggleInfo() {
+    this.showInfo = !this.showInfo;
   }
   changeMenu(menu,navItem){
     this.menu = menu

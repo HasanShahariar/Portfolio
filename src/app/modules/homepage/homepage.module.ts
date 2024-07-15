@@ -7,7 +7,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ExperianceComponent } from './components/experiance/experiance.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { ExperianceCardComponent } from './components/experiance-card/experiance-card.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { ExperianceCardComponent } from './components/experiance-card/experiance
     SkillsComponent,
     ExperianceComponent,
     ProjectsComponent,
-    ExperianceCardComponent,
+    ProjectCardComponent
   ],
   imports: [
     CommonModule,
