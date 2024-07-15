@@ -1,0 +1,63 @@
+@import "../../../../../variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+PE:wght@100..400&display=swap");
+
+a.nav-link {
+  font-weight: 500;
+  color: #6d6d6d !important;
+  cursor: pointer;
+  font-size: 16px;
+  border-bottom: 2px solid transparent;
+
+  padding: 8px 0;
+  transition: padding 0.2s ease-in-out;
+  transition: font-size 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-bottom 0.2s ease-in-out;
+}
+a.nav-link:hover {
+  color: #3d3d3d !important;
+  font-size: 17px;
+}
+a.nav-link.active {
+  border-bottom: 2px solid var(--primary-theme-color);
+  color: #3d3d3d !important;
+  font-size: 17px;
+}
+
+.navbar-brand {
+  font-family: "Playwrite PE", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--primary-theme-color);
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+/* Initial transparent state */
+.sticky-nav.transparent {
+  background-color: transparent;
+}
+
+/* Background color when scrolled */
+.sticky-nav.scrolled {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Light color with some transparency */
+  backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: border for better visibility */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow for better separation */
+}
+
+.sticky-nav.scrolled a.nav-link {
+  padding: 15px 8px;
+}
