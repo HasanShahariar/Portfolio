@@ -14,9 +14,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-  switchTheme(theme: string) {
-    this.themeService.setTheme(theme);
-  }
+
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {

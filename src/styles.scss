@@ -11,17 +11,37 @@
   --primary-theme-color: #7780ff;
   --primary-text-color: #000000;
   --secondary-text-color: #f1a803;
+  --background-color: #ffffff;
 }
 
 [data-theme="dark"] {
-  --primary-theme-color: #ffd622;
+  --primary-theme-color: #7780ff;
   --primary-text-color: #ffffff;
-  --secondary-text-color: #00cc5c;
+  --secondary-text-color: #f1a803;
+  --background-color: #070F2B;
+}
+[data-theme="red"] {
+  --primary-theme-color: #FF204E;
+  --primary-text-color: #000000;
+  --secondary-text-color: #00becc;
+  --background-color: #ffffff;
+}
+[data-theme="orange"] {
+  --primary-theme-color: #F0A500;
+  --primary-text-color: #000000;
+  --secondary-text-color: #00becc;
+  --background-color: #ffffff;
+}
+[data-theme="mint"] {
+  --primary-theme-color: #77E4C8;
+  --primary-text-color: #000000;
+  --secondary-text-color: #00becc;
+  --background-color: #ffffff;
 }
 
 body {
-  // background-color: var(--background-color);
-  // color: var(--text-color);
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;

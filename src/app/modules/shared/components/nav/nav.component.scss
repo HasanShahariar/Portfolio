@@ -3,23 +3,23 @@
 
 a.nav-link {
   font-weight: 500;
-  color: #6d6d6d !important;
+  color: var(--primary-text-color) !important;
   cursor: pointer;
   font-size: 16px;
   border-bottom: 2px solid transparent;
 
   padding: 8px 0;
   transition: padding 0.2s ease-in-out;
-  transition: font-size 0.2s ease-in-out, color 0.2s ease-in-out,
+  transition: font-size 0.2s ease-in-out,
     border-bottom 0.2s ease-in-out;
 }
 a.nav-link:hover {
-  color: #3d3d3d !important;
+  color: var(--primary-text-color) !important;
   font-size: 17px;
 }
 a.nav-link.active {
   border-bottom: 2px solid var(--primary-theme-color);
-  color: #3d3d3d !important;
+  color: var(--primary-text-color) !important;
   font-size: 17px;
 }
 
@@ -29,6 +29,14 @@ a.nav-link.active {
   font-weight: 600;
   font-style: normal;
   color: var(--primary-theme-color);
+}
+.theme i{
+  background: linear-gradient(to bottom, #ff5f5f, #7d7bfe, #d001d0);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Ensure the text color is transparent */
+  display: inline-block; /* Ensure the element is treated as an inline block */
 }
 
 .sticky-nav {
@@ -61,3 +69,49 @@ a.nav-link.active {
 .sticky-nav.scrolled a.nav-link {
   padding: 15px 8px;
 }
+.context-menu {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.context-menu div {
+  padding: 5px;
+  user-select: none;
+}
+
+.theme-container {
+  position: absolute;
+  right: 42px;
+}
+
+.theme-icon {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.theme-card {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 200px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-item {
+  padding: 10px;
+  
+}
+
