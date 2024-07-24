@@ -8,6 +8,8 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ExperianceComponent } from './components/experiance/experiance.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,12 +19,14 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
     SkillsComponent,
     ExperianceComponent,
     ProjectsComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
     HomepageRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class HomepageModule { }

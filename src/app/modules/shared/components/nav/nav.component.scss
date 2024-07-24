@@ -100,7 +100,7 @@ a.nav-link.active {
 
 .theme-card {
   position: absolute;
-  top: 40px;
+  top: 27px;
   right: 0;
   width: max-content;
   background: white;
@@ -108,14 +108,17 @@ a.nav-link.active {
   border-radius: 4px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  z-index: 1;
 }
 
 .theme-item {
-  padding: 10px;
+  padding: 5px 10px;
   
 }
 .theme-item.active{
   background-color: #c3c8cd;
-  
+}
+.theme-item{
+  cursor: pointer;
 }
 

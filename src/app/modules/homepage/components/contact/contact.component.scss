@@ -1,0 +1,28 @@
+.contact-container{
+    background-image: url("../../../../../assets/images/contact/contact-section-bg.png");
+}
+.contact-form{
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.3
+      ); /* Light color with some transparency */
+      backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+      -webkit-backdrop-filter: blur(10px); /* For Safari */
+      border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: border for better visibility */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow for better separation */
+      padding: 30px;
+}
+.section-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 51px 0;
+}
+.contact-text{
+    width: 41%;
+}
+.contact-form{
+    width: 57%;
+    border-radius: 6px;
+}
