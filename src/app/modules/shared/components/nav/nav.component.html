@@ -13,7 +13,7 @@
         @slideDownUp
       >
         <div class="d-flex flex-wrap">
-          <div *ngFor="let theme of themes" class="theme-item">
+          <div *ngFor="let theme of themes" class="theme-item" [ngClass]="{'active':theme.title==selectedtheme}">
             <a  (click)="switchTheme(theme.title)" [innerHTML]="theme.icon">
               
             </a>

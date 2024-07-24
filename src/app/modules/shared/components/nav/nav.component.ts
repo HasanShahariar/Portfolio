@@ -58,6 +58,7 @@ export class NavComponent implements OnInit {
       icon:this.sanitizer.bypassSecurityTrustHtml('<i class="fas fa-circle" style="color: #77E4C8"></i>')
     }
   ]
+  selectedtheme: string;
 
   constructor(
     private renderer: Renderer2, 
@@ -67,6 +68,7 @@ export class NavComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.selectedtheme = this.themes[0].title;
     this.checkScroll();
     this.renderer.listen('document', 'click', (event: Event) => {
       if (this.showThemes && !this.elementRef.nativeElement.contains(event.target)) {
@@ -143,6 +145,7 @@ export class NavComponent implements OnInit {
   }
   switchTheme(theme: string) {
     this.themeService.setTheme(theme);
+    this.selectedtheme = theme
   }
 
 }

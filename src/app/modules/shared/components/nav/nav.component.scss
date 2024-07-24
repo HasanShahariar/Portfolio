@@ -102,7 +102,7 @@ a.nav-link.active {
   position: absolute;
   top: 40px;
   right: 0;
-  width: 200px;
+  width: max-content;
   background: white;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 4px;
@@ -112,6 +112,10 @@ a.nav-link.active {
 
 .theme-item {
   padding: 10px;
+  
+}
+.theme-item.active{
+  background-color: #c3c8cd;
   
 }
 
