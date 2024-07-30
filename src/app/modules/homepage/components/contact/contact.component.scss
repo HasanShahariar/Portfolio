@@ -1,28 +1,44 @@
+@import '~quill/dist/quill.bubble.css'; 
+ // or
+ @import '~quill/dist/quill.snow.css';
+
 .contact-container{
-    background-image: url("../../../../../assets/images/contact/contact-section-bg.png");
+    // background-image: url("../../../../../assets/images/contact/contact-section-bg.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    // background: #dfdfdf;
 }
 .contact-form{
-    background-color: rgba(
-        255,
-        255,
-        255,
-        0.3
-      ); /* Light color with some transparency */
+    background-color: rgba(255, 255, 255, 0.3); /* Light color with some transparency */
       backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
       -webkit-backdrop-filter: blur(10px); /* For Safari */
       border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: border for better visibility */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow for better separation */
+      box-shadow: 10px 10px 23px var(--primary-theme-color) inset, -11px -12px 17px white inset; /* Optional: shadow for better separation */
       padding: 30px;
 }
+
+
 .section-wrapper{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     padding: 51px 0;
 }
 .contact-text{
-    width: 41%;
+    width: 100%;
 }
 .contact-form{
-    width: 57%;
+    width: 86%;
     border-radius: 6px;
 }
+
+::ng-deep .ql-container {
+    font-family: Arial, sans-serif;
+    height: 77%;
+  }
+  
+  ::ng-deep .ql-toolbar {
+    background-color: #f3f3f3;
+  }

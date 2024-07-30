@@ -1,18 +1,22 @@
-<div class="" id="nav">
-  <app-nav (navigateToSection)="scrollToSection($event)"></app-nav>
-</div>
-<div class="py-5 section-bg">
-  <app-banner></app-banner>
-</div>
-<div class="my-5" id="skills">
-  <app-skills></app-skills>
-</div>
-<div class="my-5" id="experiance">
-  <app-experiance></app-experiance>
-</div>
-<div class="my-5" id="projects">
-  <app-projects></app-projects>
-</div>
-<div class="mt-5" id="contact">
-  <app-contact></app-contact>
+
+
+<div data-scroll-section>
+  <div class="" id="nav">
+    <app-nav (navigateToSection)="scrollToSection($event)"></app-nav>
+  </div>
+  <div class="py-5 section-bg">
+    <app-banner></app-banner>
+  </div>
+  <div class="my-5" id="skills">
+    <app-skills></app-skills>
+  </div>
+  <div class="my-5" id="experiance">
+    <app-experiance></app-experiance>
+  </div>
+  <div class="my-5" id="projects">
+    <app-projects></app-projects>
+  </div>
+  <div class="mt-5" id="contact">
+    <app-contact></app-contact>
+  </div>
 </div>

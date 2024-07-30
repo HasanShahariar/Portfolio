@@ -1,8 +1,8 @@
-import { Component, ElementRef, EventEmitter, HostListener, OnInit, Output, Renderer2 } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, OnInit, Output, Renderer2, OnDestroy } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { ThemeService } from '../../services/theme.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-
+import { LocomotiveScrollService } from '../../services/locomotive-scroll.service';
 
 @Component({
   selector: 'app-nav',
@@ -27,7 +27,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
     ])
   ]
 })
-export class NavComponent implements OnInit {
+export class NavComponent implements OnInit, OnDestroy {
   menu: number = 1;
   showInfo: boolean = false;
   @Output() navigateToSection = new EventEmitter<string>();
@@ -38,38 +38,40 @@ export class NavComponent implements OnInit {
   showThemes = false;
   themes = [
     {
-      title:'light',
-      icon:this.sanitizer.bypassSecurityTrustHtml('<i class="far fa-sun" style="color: black"></i>')
-    }, 
-    {
-      title:'dark',
-      icon:this.sanitizer.bypassSecurityTrustHtml('<i class="fas fa-moon" style="color: black"></i>')
-    }, 
-    {
-      title:'red',
-      icon:this.sanitizer.bypassSecurityTrustHtml('<i class="fas fa-circle" style="color: red"></i>')
+      title: 'light',
+      icon: this.sanitizer.bypassSecurityTrustHtml('<i class="far fa-sun" style="color: black"></i>')
     },
     {
-      title:'orange',
-      icon:this.sanitizer.bypassSecurityTrustHtml('<i class="fas fa-circle" style="color: #F0A500"></i>')
+      title: 'dark',
+      icon: this.sanitizer.bypassSecurityTrustHtml('<i class="fas fa-moon" style="color: black"></i>')
     },
     {
-      title:'mint',
-      icon:this.sanitizer.bypassSecurityTrustHtml('<i class="fas fa-circle" style="color: #77E4C8"></i>')
+      title: 'red',
+      icon: this.sanitizer.bypassSecurityTrustHtml('<i class="fas fa-circle" style="color: red"></i>')
+    },
+    {
+      title: 'orange',
+      icon: this.sanitizer.bypassSecurityTrustHtml('<i class="fas fa-circle" style="color: #F0A500"></i>')
+    },
+    {
+      title: 'mint',
+      icon: this.sanitizer.bypassSecurityTrustHtml('<i class="fas fa-circle" style="color: #77E4C8"></i>')
     }
-  ]
+  ];
   selectedtheme: string;
 
   constructor(
-    private renderer: Renderer2, 
+    private renderer: Renderer2,
     private elementRef: ElementRef,
-    private themeService:ThemeService,
-    private sanitizer: DomSanitizer
+    private themeService: ThemeService,
+    private sanitizer: DomSanitizer,
+    private locomotiveScrollService: LocomotiveScrollService
   ) { }
 
   ngOnInit() {
     this.selectedtheme = this.themes[0].title;
-    this.checkScroll();
+    this.locomotiveScrollService.initLocomotiveScroll();
+    this.subscribeToScrollEvents();
     this.renderer.listen('document', 'click', (event: Event) => {
       if (this.showThemes && !this.elementRef.nativeElement.contains(event.target)) {
         this.closethemes();
@@ -77,29 +79,16 @@ export class NavComponent implements OnInit {
     });
   }
 
-  @HostListener('document:click', ['$event'])
-  onDocumentClick(event: MouseEvent) {
-    const clickedInside = this.elementRef.nativeElement.contains(event.target);
-    if (!clickedInside) {
-      this.showInfo = false;
-    }
-  }
-  toggleInfo() {
-    this.showInfo = !this.showInfo;
-  }
-  changeMenu(menu,navItem){
-    this.menu = menu
-    this.navigateToSection.emit(navItem);
-  }
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.checkScroll();
+  private subscribeToScrollEvents() {
+    this.locomotiveScrollService.scroll.on('scroll', (args: any) => {
+      this.checkScroll(args.scroll.y);
+    });
   }
 
-  private checkScroll() {
+  checkScroll(scrollY: number) {
     const navbar = document.getElementById('navbar');
     if (navbar) {
-      if (window.scrollY > 50) { // Adjust the scrollY value as needed
+      if (scrollY > 50) { // Adjust the scrollY value as needed
         navbar.classList.remove('transparent');
         navbar.classList.add('scrolled');
       } else {
@@ -109,30 +98,34 @@ export class NavComponent implements OnInit {
     }
   }
 
-  
+  toggleInfo() {
+    this.showInfo = !this.showInfo;
+  }
+
+  changeMenu(menu, navItem) {
+    this.menu = menu;
+    this.navigateToSection.emit(navItem);
+  }
 
   onNavigate(section: string) {
     this.navigateToSection.emit(section);
   }
 
   onRightClick(event: MouseEvent): void {
-
     event.preventDefault(); // Prevent the default browser context menu
     this.showContextMenu = true;
     this.contextMenuX = event.clientX - 250;
     this.contextMenuY = event.clientY;
-
-
-    // Hide the context menu after a short delay (e.g., 5 seconds)
   }
-  handleClickOutside(){
-    this.showContextMenu = false
+
+  handleClickOutside() {
+    this.showContextMenu = false;
   }
-  
 
   ngOnDestroy() {
     // Cleanup listeners when component is destroyed
     this.renderer.listen('document', 'click', null);
+    this.locomotiveScrollService.destroy();
   }
 
   togglethemes(event: Event) {
@@ -143,9 +136,9 @@ export class NavComponent implements OnInit {
   closethemes() {
     this.showThemes = false;
   }
+
   switchTheme(theme: string) {
     this.themeService.setTheme(theme);
-    this.selectedtheme = theme
+    this.selectedtheme = theme;
   }
-
 }

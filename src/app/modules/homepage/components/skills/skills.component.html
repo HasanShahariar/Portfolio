@@ -1,7 +1,7 @@
 <section>
   <div class="container">
-    <h2 class="text-center">Technologies and Tools</h2>
-    <div class="tab-container">
+    <h2 class="text-center" >Technologies and Tools</h2>
+    <div class="tab-container" >
       <button class="tab-btn" [ngClass]="{'active':tab==1}" (click)="switchTab(1)">All</button>
       <button class="tab-btn" [ngClass]="{'active':tab==2}" (click)="switchTab(2)">Backend</button>
       <button class="tab-btn" [ngClass]="{'active':tab==3}" (click)="switchTab(3)">Frontend </button>
@@ -11,7 +11,7 @@
       <button class="tab-btn" [ngClass]="{'active':tab==7}" (click)="switchTab(7)">Logging & Utilities</button>
       <button class="tab-btn" [ngClass]="{'active':tab==8}" (click)="switchTab(8)">Tools & Platforms</button>
     </div>
-    <div class="skill-container">
+    <div class="skill-container" appStopPropagation>
       <div class="skill-item" *ngFor="let skill of filteredSkills">
         <img [src]="skill.imageUrl" (error)="handleImageError($event)" alt="">
         <h3>{{skill.title}}</h3>

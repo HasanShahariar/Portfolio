@@ -7,18 +7,19 @@
 // $app-secondary-color: #ffd20c;
 // $app-success-color: #03a012;
 
+
 :root {
   --primary-theme-color: #7780ff;
   --primary-text-color: #000000;
   --secondary-text-color: #f1a803;
-  --background-color: #ffffff;
+  --background-color: #fdfdfd;
 }
 
 [data-theme="dark"] {
   --primary-theme-color: #7780ff;
   --primary-text-color: #ffffff;
   --secondary-text-color: #f1a803;
-  --background-color: #070F2B;
+  --background-color: #030713;
 }
 [data-theme="red"] {
   --primary-theme-color: #FF204E;
@@ -63,7 +64,7 @@ a.nav-link.active {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: var(--primary-theme-color);
+  background: var(--primary-theme-color) !important;
   border-radius: 25px;
 }
 
@@ -79,3 +80,32 @@ a.nav-link.active {
   filter: saturate(400%);
 }
 
+html, body {
+  // height: 100vh;
+  // overflow: scroll;
+}
+
+[data-scroll-container] {
+  // overflow: hidden;
+}
+
+[data-scroll-section] {
+  position: relative;
+}
+.c-scrollbar{
+  background-color: rgb(196, 196, 196) !important;
+ 
+}
+.c-scrollbar_thumb{
+  background-color: var(--primary-theme-color) !important;
+  right: -2px !important;
+  opacity: 1 !important;
+  width: 100% !important;
+}
+.c-scrollbar:hover {
+  transform: none !important;
+}
+
+.disable-scroll {
+  pointer-events: none;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocomotiveScrollService } from 'src/app/modules/shared/services/locomotive-scroll.service';
 import { ThemeService } from 'src/app/modules/shared/services/theme.service';
 
 @Component({
@@ -9,10 +10,13 @@ import { ThemeService } from 'src/app/modules/shared/services/theme.service';
 export class HomeComponent implements OnInit {
 
   constructor(
-    private themeService:ThemeService
+    private locomotiveScrollService:LocomotiveScrollService
   ) { }
 
   ngOnInit() {
+    // After new content is loaded
+this.locomotiveScrollService.update();
+
   }
 
   scrollToSection(sectionId: string): void {
