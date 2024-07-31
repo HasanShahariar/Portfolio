@@ -2,21 +2,18 @@
  // or
  @import '~quill/dist/quill.snow.css';
 
-.contact-container{
-    // background-image: url("../../../../../assets/images/contact/contact-section-bg.png");
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-    background-attachment: fixed;
-    // background: #dfdfdf;
+.contact-container{   
+    
 }
 .contact-form{
-    background-color: rgba(255, 255, 255, 0.3); /* Light color with some transparency */
-      backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
-      -webkit-backdrop-filter: blur(10px); /* For Safari */
-      border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: border for better visibility */
-      box-shadow: 10px 10px 23px var(--primary-theme-color) inset, -11px -12px 17px white inset; /* Optional: shadow for better separation */
-      padding: 30px;
+   
+    border: 10px solid; /* Adjust the border width */
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to right, #f6d365, #fda085);
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 10px; /* Optional: for rounded corners */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 
@@ -30,7 +27,7 @@
     width: 100%;
 }
 .contact-form{
-    width: 86%;
+    width: 100%;
     border-radius: 6px;
 }
 
@@ -42,3 +39,24 @@
   ::ng-deep .ql-toolbar {
     background-color: #f3f3f3;
   }
+.say-hello {
+    padding-top: 53px;
+}
+.say-hello span {
+    padding-bottom: 8px;
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 80px;
+    letter-spacing: 1px;
+}
+.say-hello span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 50px;
+    height: 1px;
+    background: #333;
+}

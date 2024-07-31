@@ -1,36 +1,20 @@
 <section class="contact-container">
+  <div class="container say-hello">
+    <span>say hello</span>
+    <h2>Contact</h2>
+  </div>
+  
   <div class="section-wrapper container">
-    
     <div class="contact-form">
-      <div>
-        <form [formGroup]="contactForm" class="d-flex flex-column gap-3">
-          <input
-            type="text"
-            placeholder="Name"
-            formControlName="name"
-            class="form-control"
-          />
-          <input
-            type="text"
-            placeholder="Email"
-            formControlName="email"
-            class="form-control"
-          />
-          <!-- <textarea row="20" placeholder="Message" formControlName="message" class="form-control"></textarea> -->
-          <quill-editor
-            formControlName="message"
-            [style]="editorStyle"
-            [modules]="config"
-          >
-          </quill-editor>
-          <button class="primary-btn">Send</button>
-        </form>
-      </div>
+      <form [formGroup]="contactForm" class="d-flex flex-column gap-3">
+        <input type="text" placeholder="Name" formControlName="name" class="form-control" />
+        <input type="text" placeholder="Email" formControlName="email" class="form-control" />
+        <quill-editor formControlName="message" [style]="editorStyle" [modules]="config"></quill-editor>
+        <button class="primary-btn">Send</button>
+      </form>
     </div>
     <div class="contact-text">
-      <p>gfdsgfdsgf</p>
-      <p>gfdsgfdsgf</p>
-      <p>gfdsgfdsgf</p>
+      <span></span>
     </div>
   </div>
 </section>

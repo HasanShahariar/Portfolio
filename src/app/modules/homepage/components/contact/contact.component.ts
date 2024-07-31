@@ -10,7 +10,7 @@ export class ContactComponent implements OnInit {
   contactForm: FormGroup;
 
   editorStyle = {
-    height: '300px'
+    height: '260px'
   };
 
   config = {
