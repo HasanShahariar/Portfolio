@@ -1,62 +1,83 @@
-@import '~quill/dist/quill.bubble.css'; 
- // or
- @import '~quill/dist/quill.snow.css';
-
-.contact-container{   
-    
+.wrapper{
+    box-shadow: 9px 9px 21px -5px;
+    border-radius: 7px;
+    overflow: hidden;
 }
-.contact-form{
-   
-    border: 10px solid; /* Adjust the border width */
-    border-image-slice: 1;
-    border-width: 5px;
-    border-image-source: linear-gradient(to right, #f6d365, #fda085);
-    padding: 20px; /* Adjust padding as needed */
-    border-radius: 10px; /* Optional: for rounded corners */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+.info-wrap{
+    background-color: var(--primary-theme-color);
+    color: white
 }
-
-
-.section-wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 51px 0;
+.dbox {
+    gap: 10%;
 }
-.contact-text{
-    width: 100%;
+.dbox .icon{
+    min-width: 50px;
+    max-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
-.contact-form{
-    width: 100%;
-    border-radius: 6px;
+.info-wrap .dbox .text p{
+    word-break: break-all;
+}
+p{
+    margin: 0;
 }
 
-::ng-deep .ql-container {
-    font-family: Arial, sans-serif;
-    height: 77%;
+.contactForm .form-control {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    background: transparent !important;
+    border-radius: 0px;
+    font-size: 15px;
+}
+.form-control:focus {
+    border-color: var(--primary-theme-color) !important;
+    box-shadow:none
+}
+.contactForm .label {
+    color: #363636;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.error-text{
+    font-size: 12px;
+    color: rgb(255, 53, 53);
+}
+.message {
+    display: inline-block;
+    padding: 10px 0;
+    // background-color: #4caf50; /* Green background */
+    color: var(--primary-theme-color); /* White text */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 1px;
+    animation: fadeOut 1s 4s forwards; /* Optional fade-out animation */
   }
   
-  ::ng-deep .ql-toolbar {
-    background-color: #f3f3f3;
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+    }
   }
-.say-hello {
-    padding-top: 53px;
-}
-.say-hello span {
-    padding-bottom: 8px;
-    display: block;
-    font-size: 10px;
-    text-transform: uppercase;
-    position: relative;
-    padding-left: 80px;
-    letter-spacing: 1px;
-}
-.say-hello span::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 4px;
-    width: 50px;
-    height: 1px;
-    background: #333;
-}
+  @media only screen and (max-width: 767px) {
+    .message {  
+        position: static;
+      }
+
+  }
+
+  
+
+
+  
+
+

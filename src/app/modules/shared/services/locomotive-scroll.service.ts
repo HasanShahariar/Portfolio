@@ -1,4 +1,4 @@
-import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
+import { HostListener, Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 import LocomotiveScroll from 'locomotive-scroll';
 @Injectable({
   providedIn: 'root'
@@ -9,11 +9,15 @@ export class LocomotiveScrollService {
   public scroll: any;
   private scrollTimeout: any;
 
+
   constructor(rendererFactory: RendererFactory2) {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
 
   initLocomotiveScroll(): void {
+
+
+    
     this.scroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
@@ -42,7 +46,7 @@ export class LocomotiveScrollService {
 
   onScrollStop(args: any): void {
     // Perform actions after scroll stops for 1 second
-    console.log('Scroll stopped', args.scroll.y);
+    // console.log('Scroll stopped', args.scroll.y);
   }
 
   update(): void {
@@ -50,9 +54,14 @@ export class LocomotiveScrollService {
   }
 
   destroy(): void {
-    console.log("destroyed");
+    // console.log("destroyed");
     
     if (this.scroll) this.scroll.destroy();
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.scroll.update();
   }
 
   // disableScroll(): void {
@@ -67,3 +76,4 @@ export class LocomotiveScrollService {
   //   }
   // }
 }
+

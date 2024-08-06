@@ -5,18 +5,14 @@ import { ThemeService } from 'src/app/modules/shared/services/theme.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
-  constructor(
-    private locomotiveScrollService:LocomotiveScrollService
-  ) { }
+  constructor(private locomotiveScrollService: LocomotiveScrollService) {}
 
   ngOnInit() {
     // After new content is loaded
-this.locomotiveScrollService.update();
-
+    this.locomotiveScrollService.update();
   }
 
   scrollToSection(sectionId: string): void {
@@ -25,6 +21,4 @@ this.locomotiveScrollService.update();
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
- 
-
 }
