@@ -12,11 +12,11 @@ export class ProjectsComponent implements OnInit {
       content: 'This is card 1 content.',
       imageUrl: '../../../../../assets/images/projects/project-portfolio.png',
     },
-    {
-      title: 'Protfolio',
-      content: 'This is card 1 content.',
-      imageUrl: '../../../../../assets/images/projects/project-portfolio.png',
-    },
+    // {
+    //   title: 'Protfolio',
+    //   content: 'This is card 1 content.',
+    //   imageUrl: '../../../../../assets/images/projects/project-portfolio.png',
+    // },
 
     // Add more card data as needed
   ];

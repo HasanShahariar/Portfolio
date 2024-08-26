@@ -10,8 +10,7 @@ a.nav-link {
 
   padding: 8px 0;
   transition: padding 0.2s ease-in-out;
-  transition: font-size 0.2s ease-in-out,
-    border-bottom 0.2s ease-in-out;
+  transition: font-size 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
 }
 a.nav-link:hover {
   color: var(--primary-text-color) !important;
@@ -30,7 +29,7 @@ a.nav-link.active {
   font-style: normal;
   color: var(--primary-theme-color);
 }
-.theme i{
+.theme i {
   background: linear-gradient(to bottom, #ff5f5f, #7d7bfe, #d001d0);
 
   -webkit-background-clip: text;
@@ -53,7 +52,7 @@ a.nav-link.active {
 }
 
 /* Background color when scrolled */
-.sticky-nav.scrolled {
+.sticky-nav {
   background-color: rgba(
     255,
     255,
@@ -104,7 +103,7 @@ a.nav-link.active {
   right: 0;
   width: max-content;
   background: white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -113,12 +112,20 @@ a.nav-link.active {
 
 .theme-item {
   padding: 5px 10px;
-  
 }
-.theme-item.active{
+.theme-item.active {
   background-color: #c3c8cd;
 }
-.theme-item{
+.theme-item {
   cursor: pointer;
 }
 
+@media (max-width: 576px) {
+  .theme-container {
+    position: static;
+    width: 21px;
+  }
+  .navbar-brand {
+    margin: 0;
+  }
+}

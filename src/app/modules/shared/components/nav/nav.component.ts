@@ -70,8 +70,8 @@ export class NavComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.selectedtheme = this.themes[0].title;
-    this.locomotiveScrollService.initLocomotiveScroll();
-    this.subscribeToScrollEvents();
+    // this.locomotiveScrollService.initLocomotiveScroll();
+    // this.subscribeToScrollEvents();
     this.renderer.listen('document', 'click', (event: Event) => {
       if (this.showThemes && !this.elementRef.nativeElement.contains(event.target)) {
         this.closethemes();
@@ -79,11 +79,11 @@ export class NavComponent implements OnInit, OnDestroy {
     });
   }
 
-  private subscribeToScrollEvents() {
-    this.locomotiveScrollService.scroll.on('scroll', (args: any) => {
-      this.checkScroll(args.scroll.y);
-    });
-  }
+  // private subscribeToScrollEvents() {
+  //   this.locomotiveScrollService.scroll.on('scroll', (args: any) => {
+  //     this.checkScroll(args.scroll.y);
+  //   });
+  // }
 
   checkScroll(scrollY: number) {
     const navbar = document.getElementById('navbar');
@@ -125,7 +125,7 @@ export class NavComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     // Cleanup listeners when component is destroyed
     this.renderer.listen('document', 'click', null);
-    this.locomotiveScrollService.destroy();
+    // this.locomotiveScrollService.destroy();
   }
 
   togglethemes(event: Event) {

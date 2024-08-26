@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     // After new content is loaded
-    this.locomotiveScrollService.update();
+    // this.locomotiveScrollService.update();
   }
 
   scrollToSection(sectionId: string): void {

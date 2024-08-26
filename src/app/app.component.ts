@@ -11,7 +11,7 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private locomotiveScrollService: LocomotiveScrollService) {}
 
   ngOnInit(): void {
-    this.locomotiveScrollService.initLocomotiveScroll();
+    // this.locomotiveScrollService.initLocomotiveScroll();
   }
 
   ngOnDestroy(): void {

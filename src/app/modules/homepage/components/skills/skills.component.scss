@@ -52,3 +52,9 @@ h3 {
     background-color: var(--primary-theme-color);
     color: white
 }
+
+@media (max-width: 576px) {
+    .tab-container {
+      flex-wrap: wrap !important;
+    }
+  }

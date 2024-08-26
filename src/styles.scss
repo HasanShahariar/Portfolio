@@ -85,13 +85,13 @@ html, body {
   // overflow: scroll;
 }
 
-[data-scroll-container] {
-  // overflow: hidden;
-}
+// [data-scroll-container] {
+//   // overflow: hidden;
+// }
 
-[data-scroll-section] {
-  position: relative;
-}
+// [data-scroll-section] {
+//   position: relative;
+// }
 .c-scrollbar{
   background-color: rgb(196, 196, 196) !important;
  
@@ -106,9 +106,9 @@ html, body {
   transform: none !important;
 }
 
-.disable-scroll {
-  pointer-events: none;
-}
+// .disable-scroll {
+//   pointer-events: none;
+// }
 
 .say-hello {
   padding-top: 53px;
