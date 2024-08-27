@@ -57,4 +57,10 @@ h3 {
     .tab-container {
       flex-wrap: wrap !important;
     }
+    .tab-btn {
+        padding: 2px 11px;
+        border-radius: 5px;
+        border: 1px solid var(--primary-theme-color);
+        font-size: 13px;
+    }
   }

@@ -50,18 +50,36 @@
   height: 36px;
   
 }
+.portfolio-image-container img{
+  width: 75%;
+}
 @media (max-width: 576px) {
   .portfolio-image-container img{
     width: 100%;
   }
   .about-me{
     text-align: center;
+    margin-top:30px
   }
 
   .banner-heighlights{
     justify-content: center;
     flex-direction: column;
   }
+
+ 
+    .portfolio-image-container {
+      order: 1;
+    }
+    .align-content-around {
+      order: 2;
+    }
+    .portfolio-image-container img{
+      width: 100%;
+    }
+  
+
+
 }
 
 

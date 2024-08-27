@@ -145,6 +145,12 @@ html, body {
   background: #333;
 }
 
+@media (max-width: 576px) {
+ *{
+  font-size: 14px !important;
+ }
+}
+
 
 
 

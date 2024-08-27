@@ -119,6 +119,9 @@ a.nav-link.active {
 .theme-item {
   cursor: pointer;
 }
+.navbar-toggler:focus {
+  box-shadow: none;
+}
 
 @media (max-width: 576px) {
   .theme-container {
@@ -132,5 +135,15 @@ a.nav-link.active {
   .theme-card[_ngcontent-ng-c2169749407] {
     top: 42px;
     left: 0;
-}
+  }
+  .navbar-toggler {
+    height: 34px;
+    aspect-ratio: 5 / 4;
+    padding: 2px;
+  }
+  .navbar-toggler-icon {
+    width: 1.2em;
+    height: 1.2em;
+
+  }
 }

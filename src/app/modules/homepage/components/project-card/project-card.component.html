@@ -1,5 +1,5 @@
 <!-- <div class="card-container" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()"> -->
-<div class="card-container">
+<!-- <div class="card-container">
   <div
     class="card"
     [ngStyle]="{ 'background-image': 'url(' + card.imageUrl + ')' }"
@@ -20,4 +20,35 @@
       </div>
     </div>
   </div>
+</div> -->
+
+<div class="card-container">
+  <div>
+    <img src="../../../../../assets/images/projects/project-portfolio-2.jpg" alt="">
+  </div>
+  <div class="align-content-around">
+    <div class="card-overlay">
+      <h3 class="m-0">{{ card.title }}</h3>
+      <p class="m-0">
+        This is my portfolio website that clearly describes my skills and interests 
+      </p>
+      <div class="build-with">
+        <span>Angular</span>
+        <span>EmailJS</span>
+        <span>Locomotive Scroll</span>
+        <span>Particles</span>
+      </div>
+      <div class="project-btn-container">
+        <button class="primary-btn" (click)="openUrl(portfolioViewUrl)">
+          View
+        </button>
+        <button class="primary-btn" (click)="openUrl(portfolioGitUrl)">
+          <i class="fab fa-github"></i> Github
+        </button>
+      </div>
+    </div>
+  
+  </div>
 </div>
+
+
