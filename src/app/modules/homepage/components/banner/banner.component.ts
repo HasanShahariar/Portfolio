@@ -19,7 +19,7 @@ export class BannerComponent implements OnInit {
   downloadPdf(){
     const link = document.createElement('a');
     link.href = '../../../../../assets/pdf/Resume-Hasan Shahariar.pdf';
-    link.download = 'resume.pdf';
+    link.download = 'Resume-Hasan Shahariar.pdf';
     link.click();
   }
 
