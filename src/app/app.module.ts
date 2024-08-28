@@ -20,8 +20,7 @@ import { NgxParticlesModule } from '@tsparticles/angular';
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
-    NgxParticlesModule 
-
+    NgxParticlesModule
     
   ],
   providers: [],

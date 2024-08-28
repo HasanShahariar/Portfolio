@@ -6,6 +6,7 @@
     border-radius: 5px;
     color: white;
     border: none;
+    z-index: 5;
 }
 .resume-btn:hover{
     filter: saturate(200%);
@@ -16,6 +17,7 @@
   font-weight: 500;
   font-style: normal;
   font-size: 17px;
+  z-index: 5;
   }
   #particles-js {
     position: absolute;
@@ -52,7 +54,26 @@
 }
 .portfolio-image-container img{
   width: 75%;
+  z-index: 5 !important;
+  position: relative;
 }
+.specific-component-wrapper {
+    position: relative;
+    /* Add any additional styling required */
+}
+
+.particles-container {
+    position: relative;
+    // background-color: #ededef
+}
+
+ng-particles{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
 @media (max-width: 576px) {
   .portfolio-image-container img{
     width: 100%;

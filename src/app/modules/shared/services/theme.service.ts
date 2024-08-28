@@ -11,6 +11,9 @@ export class ThemeService {
   setTheme(theme: string) {
     this.currentTheme = theme;
     document.documentElement.setAttribute('data-theme', theme);
+debugger
+    const event = new CustomEvent('theme-change');
+    document.dispatchEvent(event);
   }
 
   getTheme(): string {

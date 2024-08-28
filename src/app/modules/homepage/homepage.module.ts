@@ -11,6 +11,7 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
 import { ContactComponent } from './components/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { QuillModule } from 'ngx-quill';
+import { NgParticlesModule } from "ng-particles";
 
 
 @NgModule({
@@ -28,7 +29,9 @@ import { QuillModule } from 'ngx-quill';
     HomepageRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    QuillModule.forRoot()
+    QuillModule.forRoot(),
+    NgParticlesModule
+    
   ]
 })
 export class HomepageModule { }

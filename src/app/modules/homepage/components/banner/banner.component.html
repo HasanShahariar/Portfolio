@@ -1,5 +1,5 @@
 
-<section>
+<section class="particles-container">
   <div class="container">
     <div class="row">
       <div class="col-md-6 order-md-2 order-1 text-end portfolio-image-container">
@@ -34,6 +34,16 @@
     </div>
     
   </div>
+  <ng-particles
+  [id]="id"
+  [options]="particlesOptions"
+  [particlesInit]="particlesInit"
+  (particlesLoaded)="particlesLoaded($event)"
+></ng-particles>
 </section>
-<!-- <div id="particles-js"></div> -->
+
+ 
+
+
+
 
