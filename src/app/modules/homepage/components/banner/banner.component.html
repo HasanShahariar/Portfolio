@@ -2,22 +2,36 @@
 <section class="particles-container">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 order-md-2 order-1 text-end portfolio-image-container">
+      <div class="col-md-4 order-md-2 order-1 text-end portfolio-image-container">
         <img
           src="../../../../../assets/images/Image_Hasan_Shahariar.png"
           alt=""
         />
       </div>
-      <div class="col-md-6 order-md-1 order-2 align-content-around">
-        <div>
-          <p class="about-me">
+      <div class="col-md-8 order-md-1 order-2 align-content-around">
+        <div class="mt-4">
+          <!-- <p class="about-me">
             I am a problem solver and experienced Software Engineer with a
             demonstrated history of working in the computer software industry. I
             always had a great curiosity for learning and discovering new things. I
             regularly work to improve my knowledge and the betterment of my
             community. I am skilled in C#, .NET, Typescript, Angular, and Teamwork.
             I am concerned about building a reusable, scalable software product.
-          </p>
+          </p> -->
+
+          <div class="dynamic-text">
+            <h2>Hi There,<br> I'm  <span class="highlight-name">Hasan Shahariar</span></h2>
+            <h2 class="mb-lg-5">
+              I am into 
+              
+                <span id="typed-output"></span>
+            
+              
+            </h2>
+            
+          </div>
+
+
           <div class="d-flex gap-3 align-items-center banner-heighlights">
             <button class="resume-btn" (click)="downloadPdf()">
               <i class="far fa-file-pdf"></i>

@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { AfterViewInit, ApplicationRef, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import {
   MoveDirection,
   ClickMode,
@@ -12,32 +12,30 @@ import { loadSlim } from 'tsparticles-slim';
 import { Renderer2, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { ThemeService } from 'src/app/modules/shared/services/theme.service';
+import Typed from 'typed.js';
 
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss'],
 })
-export class BannerComponent implements OnInit {
+export class BannerComponent implements OnInit,AfterViewInit  {
   id = 'tsparticles';
 
   primaryThemeColor: string;
   particlesOptions: any;
   particlesId = 'tsparticles-' + Date.now(); // U
   private themeChangeListener: () => void;
+  stringsArray: string[];
   constructor(
     private cdr: ChangeDetectorRef,
-    private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document,
-    private themeService: ThemeService
+    private appRef: ApplicationRef
+    
   ) {}
 
   ngOnInit() {
     this.setParticlesOptions();
-    // this.renderer.listen(this.document.documentElement, 'data-theme', () => {
-    //   this.setParticlesOptions();
-    // });
-
+   
     this.themeChangeListener =  () => {
       
       debugger
@@ -45,8 +43,30 @@ export class BannerComponent implements OnInit {
       this.cdr.detectChanges();
     };
     document.addEventListener('theme-change', this.themeChangeListener);
-    this.cdr.detectChanges()
+
   }
+
+
+  ngAfterViewInit() {
+    const options = {
+      strings: [
+        'Mastering Modern Web Tech',
+        'Crafting Dynamic Web Solutions',
+        'Innovating with .NET & Angular'
+      ],
+      typeSpeed: 50,
+      backSpeed: 50,
+      // backDelay: 1000,
+      // startDelay: 500,
+      loop: true,
+      showCursor: false,
+      // cursorChar: '',
+    };
+
+    new Typed('#typed-output', options);
+  }
+
+
 
   setParticlesOptions(): void {
     this.primaryThemeColor = getComputedStyle(document.documentElement)
@@ -73,7 +93,7 @@ export class BannerComponent implements OnInit {
             mode: ClickMode.push,
           },
           onHover: {
-            enable: false,
+            enable: true,
             mode: HoverMode.repulse,
           },
           resize: true,

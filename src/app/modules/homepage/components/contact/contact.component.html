@@ -13,14 +13,11 @@
               <div
                 class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch"
               >
-                <div class="position-relative w-100 p-md-5 p-4 ">
+                <div class="position-relative w-100 p-md-5 p-4">
                   <div *ngIf="showMessage" class="message">
                     Your message was sent, thank you!
                   </div>
-                  <form
-                    [formGroup]="contactForm"
-                    class="contactForm"
-                  >
+                  <form [formGroup]="contactForm" class="contactForm">
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
@@ -31,11 +28,13 @@
                             name="name"
                             id="name"
                             placeholder="Name"
-							formControlName="name"
-							(blur)="logValidationErrors()"
-							[ngClass]="{ 'is-invalid': formError.name }"
+                            formControlName="name"
+                            (blur)="logValidationErrors()"
+                            [ngClass]="{ 'is-invalid': formError.name }"
                           />
-						  <span *ngIf="formError.name" class="error-text">{{ formError.name }}</span>
+                          <span *ngIf="formError.name" class="error-text">{{
+                            formError.name
+                          }}</span>
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -47,11 +46,13 @@
                             name="email"
                             id="email"
                             placeholder="Email"
-							formControlName="email"
-							(blur)="logValidationErrors()"
-							[ngClass]="{ 'is-invalid': formError.email }"
+                            formControlName="email"
+                            (blur)="logValidationErrors()"
+                            [ngClass]="{ 'is-invalid': formError.email }"
                           />
-						  <span *ngIf="formError.email" class="error-text">{{ formError.email }}</span>
+                          <span *ngIf="formError.email" class="error-text">{{
+                            formError.email
+                          }}</span>
                         </div>
                       </div>
                       <div class="col-md-12">
@@ -63,11 +64,13 @@
                             name="subject"
                             id="subject"
                             placeholder="Subject"
-							formControlName="subject"
-							(blur)="logValidationErrors()"
-							[ngClass]="{ 'is-invalid': formError.subject }"
+                            formControlName="subject"
+                            (blur)="logValidationErrors()"
+                            [ngClass]="{ 'is-invalid': formError.subject }"
                           />
-						  <span *ngIf="formError.subject" class="error-text">{{ formError.subject }}</span>
+                          <span *ngIf="formError.subject" class="error-text">{{
+                            formError.subject
+                          }}</span>
                         </div>
                       </div>
                       <div class="col-md-12">
@@ -80,16 +83,20 @@
                             cols="30"
                             rows="4"
                             placeholder="Message"
-							formControlName="message"
-							(blur)="logValidationErrors()"
-							[ngClass]="{ 'is-invalid': formError.message }"
+                            formControlName="message"
+                            (blur)="logValidationErrors()"
+                            [ngClass]="{ 'is-invalid': formError.message }"
                           ></textarea>
-						  <span *ngIf="formError.message" class="error-text">{{ formError.message }}</span>
+                          <span *ngIf="formError.message" class="error-text">{{
+                            formError.message
+                          }}</span>
                         </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <button class="primary-btn" (click)="onSubmit()">Send Message</button>
+                          <button class="primary-btn" (click)="onSubmit()">
+                            Send Message
+                          </button>
                           <div class="submitting"></div>
                         </div>
                       </div>
@@ -102,20 +109,19 @@
                   <p class="mb-4">
                     We're open for any suggestion or just to have a chat
                   </p>
-                  <div class="dbox w-100 d-flex align-items-start gap-4 mb-4">
+                  <div class="dbox w-100 d-flex ">
                     <div
                       class="icon d-flex align-items-center justify-content-center"
                     >
                       <span class="fa fa-map-marker"></span>
                     </div>
-                    <div class="text pl-3">
+                    <div class="text align-content-center pl-3">
                       <p>
-                        
-						<span>Kazipara, Dhaka, Bangladesh</span>
+                        <span>Kazipara, Dhaka, Bangladesh</span>
                       </p>
                     </div>
                   </div>
-                  <div class="dbox w-100 d-flex align-items-center gap-4 mb-4">
+                  <div class="dbox w-100 d-flex align-items-center">
                     <div
                       class="icon d-flex align-items-center justify-content-center"
                     >
@@ -123,12 +129,11 @@
                     </div>
                     <div class="text pl-3">
                       <p>
-                        
                         <span>01771179790</span>
                       </p>
                     </div>
                   </div>
-                  <div class="dbox w-100 d-flex align-items-center gap-4 mb-4">
+                  <div class="dbox w-100 d-flex align-items-center">
                     <div
                       class="icon d-flex align-items-center justify-content-center"
                     >
@@ -136,9 +141,7 @@
                     </div>
                     <div class="text pl-3">
                       <p>
-                        
-                        
-						<span>showrav550@gmail.com</span>
+                        <span>showrav550@gmail.com</span>
                       </p>
                     </div>
                   </div>

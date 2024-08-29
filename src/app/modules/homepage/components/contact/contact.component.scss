@@ -8,12 +8,13 @@
     color: white
 }
 .dbox {
-    gap: 10%;
+    gap: 6%;
+    margin-bottom: 1rem;
 }
 .dbox .icon{
-    min-width: 50px;
-    max-width: 50px;
-    height: 50px;
+    min-width: 3rem;
+    max-width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
@@ -62,6 +63,7 @@ p{
     top: 1px;
     animation: fadeOut 1s 4s forwards; /* Optional fade-out animation */
   }
+  
   
   @keyframes fadeOut {
     to {

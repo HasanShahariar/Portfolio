@@ -12,6 +12,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { QuillModule } from 'ngx-quill';
 import { NgParticlesModule } from "ng-particles";
+import { NgxTypedJsModule } from 'ngx-typed-js';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { NgParticlesModule } from "ng-particles";
     SharedModule,
     ReactiveFormsModule,
     QuillModule.forRoot(),
-    NgParticlesModule
+    NgParticlesModule,
+    NgxTypedJsModule
     
   ]
 })
