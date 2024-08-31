@@ -10,7 +10,6 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { QuillModule } from 'ngx-quill';
 import { NgParticlesModule } from "ng-particles";
 import { NgxTypedJsModule } from 'ngx-typed-js';
 
@@ -30,7 +29,6 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
     HomepageRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    QuillModule.forRoot(),
     NgParticlesModule,
     NgxTypedJsModule
     

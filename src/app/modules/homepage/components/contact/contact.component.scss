@@ -63,6 +63,10 @@ p{
     top: 1px;
     animation: fadeOut 1s 4s forwards; /* Optional fade-out animation */
   }
+
+.contact-container{
+    overflow: hidden;
+}
   
   
   @keyframes fadeOut {

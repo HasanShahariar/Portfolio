@@ -1,6 +1,7 @@
-<section>
+<section data-aos="fade-up">
   <div class="container">
-    <div class="say-hello">
+    <div class="say-hello" 
+   >
       <span>CHECK OUT MY</span>
       <h2>Skills</h2>
     </div>
@@ -10,12 +11,12 @@
       <button class="tab-btn" [ngClass]="{'active':tab==2}" (click)="switchTab(2)">Backend</button>
       <button class="tab-btn" [ngClass]="{'active':tab==3}" (click)="switchTab(3)">Frontend </button>
       <button class="tab-btn" [ngClass]="{'active':tab==4}" (click)="switchTab(4)">Databases</button>
-      <button class="tab-btn" [ngClass]="{'active':tab==5}" (click)="switchTab(5)">Principles & Patterns</button>
+      <button class="tab-btn" [ngClass]="{'active':tab==5}" (click)="switchTab(5)">Principles, Patterns & Architecture</button>
       <button class="tab-btn" [ngClass]="{'active':tab==6}" (click)="switchTab(6)">Security</button>
       <button class="tab-btn" [ngClass]="{'active':tab==7}" (click)="switchTab(7)">Logging & Utilities</button>
       <button class="tab-btn" [ngClass]="{'active':tab==8}" (click)="switchTab(8)">Tools & Platforms</button>
     </div>
-    <div class="skill-container" appStopPropagation>
+    <div data-aos="fade-up" class="skill-container" >
       <div class="skill-item" *ngFor="let skill of filteredSkills">
         <img [src]="skill.imageUrl" (error)="handleImageError($event)" alt="">
         <h3>{{skill.title}}</h3>

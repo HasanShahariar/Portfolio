@@ -9,6 +9,7 @@
     z-index: 5;
     font-weight: 600;
     position: relative;
+    overflow: hidden;
 }
 .resume-btn::before {
   content: '';
@@ -99,6 +100,11 @@
   z-index: 5 !important;
   position: relative;
 }
+.portfolio-image-container {
+
+  z-index: 55 !important;
+
+}
 .specific-component-wrapper {
     position: relative;
     /* Add any additional styling required */
@@ -131,6 +137,12 @@ ng-particles{
 .typed-cursor{
   color: var(--primary-theme-color);
 }
+.br{
+  display: none;
+}
+.banner-text{
+  z-index: 55;
+}
 
 @media (max-width: 576px) {
   .portfolio-image-container img{
@@ -158,8 +170,12 @@ ng-particles{
     }
   
     .dynamic-text h2,span{
-      font-size: 21px !important;
+      font-size: 18px !important;
       text-align: center;
+      min-height: 56px;
+    }
+    .br{
+      display: block;
     }
 
 }

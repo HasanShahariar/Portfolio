@@ -54,8 +54,8 @@ export class NavComponent implements OnInit, OnDestroy {
       icon: this.sanitizer.bypassSecurityTrustHtml('<i class="fas fa-circle" style="color: #F0A500"></i>')
     },
     {
-      title: 'mint',
-      icon: this.sanitizer.bypassSecurityTrustHtml('<i class="fas fa-circle" style="color: #77E4C8"></i>')
+      title: 'skyblue',
+      icon: this.sanitizer.bypassSecurityTrustHtml('<i class="fas fa-circle" style="color: #2dc1e6"></i>')
     }
   ];
   selectedtheme: string;

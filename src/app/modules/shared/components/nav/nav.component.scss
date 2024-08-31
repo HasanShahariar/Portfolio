@@ -122,28 +122,48 @@ a.nav-link.active {
 .navbar-toggler:focus {
   box-shadow: none;
 }
+.navbar-nav-scroll{
+  gap: 12px;
+}
 
 @media (max-width: 576px) {
+  .navbar-nav-scroll{
+    gap: 0px;
+    margin-top: 8px;
+  }
+  
   .theme-container {
     position: static;
     width: 21px;
+    margin-left: 8px;
   }
   .navbar-brand {
     margin: 0;
   }
 
-  .theme-card[_ngcontent-ng-c2169749407] {
-    top: 42px;
+  .theme-card {
+    top: 36px;
     left: 0;
   }
   .navbar-toggler {
     height: 25px;
     aspect-ratio: 5 / 4;
     padding: 2px;
+    margin-right: 6px;
   }
   .navbar-toggler-icon {
     width: 1.2em;
     height: 1.2em;
+
+  }
+  a.nav-link {
+    padding: 4px 11px;
+    border-radius: 5px;
+    margin: 0 6px;
+  }
+  a.nav-link.active {
+  
+    border: 1px solid var(--primary-theme-color);
 
   }
 }

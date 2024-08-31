@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { SkillsService } from '../../services/skills.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent implements OnInit,AfterViewInit {
   skills: any;
   defaultImageUrl = '../../../../../assets/images/no-image.png'
   tab: number = 1;
@@ -19,6 +20,18 @@ export class SkillsComponent implements OnInit {
   ngOnInit() {
     this.getSkills();
   }
+
+  ngAfterViewInit(): void {
+    const scrollableContainer = document.querySelector('.container');
+
+    if (scrollableContainer) {
+      scrollableContainer.addEventListener('scroll', () => {
+        AOS.refresh();
+      });
+    }
+  }
+
+
 
   getSkills(){
     this.service.getSkills().subscribe((data) => {
@@ -46,7 +59,7 @@ export class SkillsComponent implements OnInit {
       this.filteredSkills = this.skills.filter(c=>c.typeId==3) 
     }
     if(tab==5){
-      this.filteredSkills = this.skills.filter(c=>c.typeId==4) 
+      this.filteredSkills = this.skills.filter(c=>c.typeId==4 || c.typeId==5) 
     }
     if(tab==6){
       this.filteredSkills = this.skills.filter(c=>c.typeId==6) 

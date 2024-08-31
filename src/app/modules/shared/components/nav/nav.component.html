@@ -1,7 +1,7 @@
-<nav id="navbar" class="navbar navbar-expand-md sticky-nav py-0">
-  <div class="container-md">
+<nav id="navbar"  class="navbar navbar-expand-md sticky-nav py-0">
+  <div class="container-md px-0">
 
-    <div class="theme-container">
+    <div class="theme-container" >
       <!-- <button (click)="togglethemes($event)" class="theme-icon">
         themes
       </button> -->
@@ -27,8 +27,8 @@
       aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse position-relative" id="navbarScroll">
-      <ul class="navbar-nav ms-auto  my-md-0 navbar-nav-scroll gap-3" style="--bs-scroll-height: 100%;">
+    <div  class="collapse navbar-collapse position-relative" id="navbarScroll">
+      <ul class="navbar-nav ms-auto  my-md-0 navbar-nav-scroll" style="--bs-scroll-height: 100%;">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" (click)="changeMenu(1,'nav')"
             [ngClass]="{'active':menu==1}">Home</a>

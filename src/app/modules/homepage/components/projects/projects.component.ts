@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectsComponent implements OnInit {
   cards = [
     {
-      title: 'Protfolio',
+      title: 'Potfolio',
       content: 'This is card 1 content.',
       imageUrl: '../../../../../assets/images/projects/project-portfolio.png',
     },

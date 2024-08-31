@@ -3,6 +3,7 @@
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+HR:wght@100..400&family=Quicksand:wght@300..700&display=swap");
+// @import 'aos/dist/aos.css';
 // $app-primary-color: #7780ff;
 // $app-secondary-color: #ffd20c;
 // $app-success-color: #03a012;
@@ -24,21 +25,27 @@
 [data-theme="red"] {
   --primary-theme-color: #FF204E;
   --primary-text-color: #000000;
-  --secondary-text-color: #00becc;
+  --secondary-text-color: #00cc0a;
   --background-color: #ffffff;
 }
 [data-theme="orange"] {
   --primary-theme-color: #F0A500;
   --primary-text-color: #000000;
-  --secondary-text-color: #00becc;
+  --secondary-text-color: #a23bdd;
   --background-color: #ffffff;
 }
-[data-theme="mint"] {
-  --primary-theme-color: #77E4C8;
+[data-theme="skyblue"] {
+  --primary-theme-color: #2dc1e6;
   --primary-text-color: #000000;
-  --secondary-text-color: #00becc;
+  --secondary-text-color: #FF204E;
   --background-color: #ffffff;
 }
+[data-aos] {
+  transition-duration: 600ms !important;
+  transition-delay: 150ms !important;
+  transition-timing-function: ease-in-out !important;
+}
+
 
 body {
   background-color: var(--background-color);
@@ -116,6 +123,7 @@ html, body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    
 }
 .say-hello span {
   padding-bottom: 8px;

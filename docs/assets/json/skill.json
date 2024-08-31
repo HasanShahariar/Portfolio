@@ -196,6 +196,13 @@
       "imageUrl": "../../../../../assets/images/skills/repository.png"
     },
     {
+      "id": 28,
+      "typeId": 4,
+      "type": "Programming Principles and Patterns",
+      "title": "Mediator pattern",
+      "imageUrl": "../../../../../assets/images/skills/repository.png"
+    },
+    {
       "id": 29,
       "typeId": 4,
       "type": "Programming Principles and Patterns",
